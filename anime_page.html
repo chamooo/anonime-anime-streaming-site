@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonime</title>
+    <link rel="stylesheet" href="css/anime_page.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/null.css">
+    <script src="/Anonime/js/playerjs.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,regular,500,600,700,800,900"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__menu menu">
+                    <div class="header__logo">Anomime</div>
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">List anime</a></li>
+                        </ul>
+                    </nav>
+                    <form class="header__form form-header">
+                        <input class="form-header__input" type="text" placeholder="Search anime or movie">
+                    </form>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container">
+                <div class="main__title">
+                    One Piece - Episode 1018
+                </div>
+                
+                    <div class="main__madiaplayer" id="player"></div>
+                    <div class="main__pic">
+                        <img src="/Anonime/img/main-page/anime_img.png" alt="">
+                    </div>
+                    <div class="main__description">
+                        <div class="main__description__item">Type :</div>
+                        <div class="main__description__item__in">Tv</div>
+                        <div class="main__description__item">Status :</div>
+                        <div class="main__description__item__in">Ongoing</div>
+                        <div class="main__description__item">Studios :</div>
+                        <div class="main__description__item__in">Toei Animation</div>
+                        <div class="main__description__item">Duration :</div>
+                        <div class="main__description__item__in">24 Min.</div>
+                        <div class="main__description__item">Genres :</div>
+                        <div class="main__description__item__in">Action, Adventure, Fantasy</div>
+                    </div>
+                </div>
+            </main>
+
+
+        
+    </div>
+    <script>
+    var player = new Playerjs({id:"player", file:"//site.com/video.mp4"});
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
