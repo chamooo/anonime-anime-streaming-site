@@ -13,14 +13,14 @@
         align-items: center;
     }
 
-    &__logo {
+    &__logo a {
         font-family: 'Poppins';
         font-weight: 700;
         font-size: 36px;
         line-height: 32px;
         letter-spacing: 0.07em;
-        color: #FFFFFF;
         padding-right: 90px;
+        color: #FFFFFF;
     }
 }
 .menu {

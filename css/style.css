@@ -43,14 +43,14 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.header__logo {
+.header__logo a {
   font-family: "Poppins";
   font-weight: 700;
   font-size: 36px;
   line-height: 32px;
   letter-spacing: 0.07em;
-  color: #FFFFFF;
   padding-right: 90px;
+  color: #FFFFFF;
 }
 
 .menu__body {
@@ -177,4 +177,92 @@ body {
   top: 0;
   left: 0;
   background: linear-gradient(269.96deg, rgba(29, 29, 29, 0) 0.04%, rgba(29, 29, 29, 0.8) 99.5%);
+}
+
+.new {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.new__title {
+  margin-bottom: 40px;
+}
+
+.movies-new__items {
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+  row-gap: 70px;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+}
+.movies-new__item {
+  position: relative;
+}
+
+.item-new-movies {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.item-new-movies__image {
+  display: block;
+  position: relative;
+  padding-bottom: 148%;
+  overflow: hidden;
+}
+.item-new-movies__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+}
+.item-new-movies__image img:hover {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+}
+.item-new-movies__episode {
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 112.5%;
+  text-align: center;
+  color: #FFFFFF;
+  position: absolute;
+  width: 100%;
+  bottom: 14px;
+}
+.item-new-movies__title {
+  display: block;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #FFFFFF;
+  position: absolute;
+  width: 100%;
+  bottom: -15px;
+  max-height: 18px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.item-new-movies__title:hover {
+  color: rgb(160, 160, 160);
+}
+
+.small-gradient:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(29, 29, 29, 0)), to(#192026));
+  background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #192026 100%);
 }
