@@ -3,8 +3,11 @@ $md2: 990.98;
 $md3: 768.98;
 $md4: 479.98;
 
+$bgColor: #192026;
 
-
+body {
+    background: $bgColor;
+}
 
 [class*="__container"] { //для усіх класів, де буде зусьтрічатись "__container"
     max-width: 1170px;
