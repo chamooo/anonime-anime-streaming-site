@@ -1,4 +1,6 @@
+/*jshint esversion: 6 */
 // SLIDER
+
 const swiper = new Swiper('.slider-preview', {
     // Optional parameters
     loop: true,
