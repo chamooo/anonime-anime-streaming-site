@@ -9,6 +9,14 @@ body {
     background: $bgColor;
 }
 
+.title {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 112.5%;
+    color: #FFFFFF;
+
+}
 [class*="__container"] { //для усіх класів, де буде зусьтрічатись "__container"
     max-width: 1170px;
     margin: 0px auto;
@@ -35,3 +43,4 @@ body {
 
 
 @import 'header.scss';
+@import 'review.scss';
