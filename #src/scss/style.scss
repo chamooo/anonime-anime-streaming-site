@@ -1,0 +1,34 @@
+$md1: 1199.98;
+$md2: 990.98;
+$md3: 768.98;
+$md4: 479.98;
+
+
+
+
+[class*="__container"] { //для усіх класів, де буде зусьтрічатись "__container"
+    max-width: 1170px;
+    margin: 0px auto;
+}
+@media (max-width: ($md1 + px)){
+    [class*="__container"] {
+        max-width: 970px;
+
+    }
+}
+@media (max-width: ($md2 + px)){
+    [class*="__container"] {
+        max-width: 750px;
+
+    }
+}
+@media (max-width: ($md3 + px)){
+    [class*="__container"] {
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: none;
+    }
+}
+
+
+@import 'header.scss';
