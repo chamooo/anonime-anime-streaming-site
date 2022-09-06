@@ -15,7 +15,7 @@
         }
     }
     &__left {
-    width: 770px;
+        width: 770px;
     }
 
     // .main__title
@@ -42,7 +42,8 @@
         width: 770px;
         height: 475px;
         margin-bottom: 40px;
-    
+        border-radius: 22px;
+        overflow: hidden;
     }
     &__pic {
         float: left;

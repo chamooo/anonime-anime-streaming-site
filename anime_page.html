@@ -28,7 +28,7 @@
             <div class="header__container">
                 <div class="header__menu menu">
                     <div class="header__logo">
-                        <a href="#">Anomime</a> 
+                        <a href="/index.html">Anomime</a> 
                     </div>
                     <nav class="menu__body">
                         <ul class="menu__list">
@@ -101,7 +101,14 @@
             
     </div>
     <script>
-        var player = new Playerjs({id:"player", file:"Spirit of my summer.mp4"});
+        var player = new Playerjs({
+            id: "player",
+            file: [
+                { "title": "Episode 1", "file": "Ссылка" },
+                { "title": "Episode 2", "file": "Ссылка" }
+            ]
+        });
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
