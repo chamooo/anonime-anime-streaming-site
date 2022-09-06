@@ -24,50 +24,42 @@
 
 <body>
     <div class="wrapper">
-        <header class="header">
-            <div class="header__container">
-                <div class="header__menu menu">
-                    <div class="header__logo">
-                        <a href="/index.html">Anomime</a> 
-                    </div>
-                    <nav class="menu__body">
-                        <ul class="menu__list">
-                            <li class="menu__item"><a href="/index.html" class="menu__link">Home</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">List anime</a></li>
-                        </ul>
-                    </nav>
-                    <form class="header__form form-header">
-                        <input class="form-header__input" type="text" placeholder="Search anime or movie">
-                    </form>
-                </div>
-            </div>
-        </header>
+        <?php require('parts/header.php') ?>
+
         <main class="main">
             <div class="main__container">
                 <div class="main__left">
 
-                    <div class="main__title">
-                        One Piece - Episode 1018
-                    </div>
+                    <?php 
+                    $id = $_GET['id'];
+                    $sql = "SELECT title, sypnosis, img_src, genres, duration, movie.status,
+                    type.type_name, studio.studio_name FROM movie
+                    JOIN type ON id_type = type.id
+                    JOIN studio ON id_studio = studio.id
+                    WHERE movie.id = $id";
+                    $result = mysqli_query($conn, $sql);
+                    $row = $result->fetch_assoc();
+                    ?>
+                    <div class="main__title"><?= $row['title'] ?></div>
                 
                     <div class="main__madiaplayer" id="player"></div>
                     <div class="main__pic">
-                        <img src="img/main-page/anime_img.png" alt="">
+                        <img src="<?= $row['img_src'] ?>" alt="">
                     </div>
                     <div class="main__description">
                         <div class="main__description__item">Type :</div>
-                        <div class="main__description__item__in">Tv</div>
+                        <div class="main__description__item__in"><?= $row['type_name'] ?></div>
                         <div class="main__description__item">Status :</div>
-                        <div class="main__description__item__in">Ongoing</div>
+                        <div class="main__description__item__in"><?= $row['status'] ?></div>
                         <div class="main__description__item">Studios :</div>
-                        <div class="main__description__item__in">Toei Animation</div>
+                        <div class="main__description__item__in"><?= $row['studio_name'] ?></div>
                         <div class="main__description__item">Duration :</div>
-                        <div class="main__description__item__in">24 Min.</div>
+                        <div class="main__description__item__in"><?= $row['duration'] ?> Min.</div>
                         <div class="main__description__item">Genres :</div>
-                        <div class="main__description__item__in">Action, Adventure, Fantasy</div>
+                        <div class="main__description__item__in"><?= $row['genres'] ?></div>
                     </div>
                     <div class="main__description__title">Sypnosis :</div>
-                    <div class="main__description__text">Gol D. Roger was known as the "Pirate King," the strongest and most infamous being to have sailed the Grand Line. The capture and execution of Roger by the World Government brought a change throughout the world. His last words before his death revealed the existence of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece—which promises an unlimited amount of riches and fame—and quite possibly the pinnacle of glory and the title of the Pirate King.</div>
+                    <div class="main__description__text"><?= $row['sypnosis'] ?></div>
                 </div>
                 <div class="main__right">
                     <div class="main__title">
@@ -96,22 +88,39 @@
                 </div>
             </div>
             </main>
-            
-            
-            
     </div>
-    <script>
-        var player = new Playerjs({
-            id: "player",
-            file: [
-                { "title": "Episode 1", "file": "Ссылка" },
-                { "title": "Episode 2", "file": "Ссылка" }
-            ]
-        });
 
-    </script>
+ 
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+
+
+
+    <script>
+
+        $.ajax({
+            type: "GET",
+            url: "/server/episode/index.php",
+            data: { 
+                id: <?= $_GET['id'] ?>
+            },
+            success: function (response) {
+                let obj = JSON.parse(response);
+                let data1 = obj.map(x => {
+                    return  { "title": x[0], "file": x[2] }
+                })
+                var player = new Playerjs({
+                    id: "player",
+                    file: data1
+                });
+            }
+        });
+
+        
+       
+    </script>
 </body>
 
 </html>

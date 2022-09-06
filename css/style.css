@@ -426,7 +426,13 @@ body {
 .main__pic {
   float: left;
   margin-right: 30px;
+  
 }
+.main__pic img {
+  max-width: 270px;
+  min-height: 380px;
+}
+.main__pic
 .main__description {
   display: -webkit-box;
   display: -ms-flexbox;
