@@ -70,6 +70,7 @@
         background: transparent;
         width: 80%;
         padding-left: 20px;
+        padding-right: 20px;
 
         font-family: 'Poppins';
         font-weight: 400;
@@ -79,4 +80,51 @@
         border: none;
         color: #FFFFFF;
     }
+}
+
+.input-search-button {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    padding-right: 30px;
+    transition: all 0.3s ease 0s;
+    &:hover {
+        transform: scale(1.06);
+    }
+}
+
+@media (max-width: ($md2+px)){
+    .header__logo a {
+        padding-right: 50px;
+    }
+    
+}
+@media (max-width: ($md3 + px)){
+    
+    .menu__list {
+        display: none;
+        
+    }
+    .form-header {
+
+        margin-right: 0px;
+        min-width: 190px;
+        width: 100%;
+
+        align-self: center;
+        margin-top: 40px;
+
+        height: 70px;
+    }
+    .header__menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__logo a{
+        padding: 0;
+    }
+}
+@media (max-width: ($md4 + px)){
+
 }
