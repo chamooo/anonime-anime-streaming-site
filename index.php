@@ -71,8 +71,9 @@
             </section>
 
             <section class="page__new new">
+
                 <div class="new__container">
-                    <div class="new__title title">New Realease</div>
+                    <div class="new__title title">New Realeases</div>
                     <div class="new__movies movies-new">
                         <div class="movies-new__items">
                             <?php 
