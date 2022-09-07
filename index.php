@@ -38,7 +38,7 @@
                         <div class="slider-preview__wrapper swiper-wrapper">
                             <!-- Slides -->
                             <div class="slider-preview__slide swiper-slide">
-                                <div class="swiper-slide__title">Weather With You</div>
+                                <div class="swiper-slide__title">Spy X Family</div>
                                 <div class="swiper-slide__text">Corrupt politicians, frenzied nationalists, and other
                                     warmongering forces constantly jeopardize the thin veneer of peace between
                                     neighboring countries Ostania and Westalis.</div>
@@ -48,7 +48,7 @@
                                 </div>
                             </div>
                             <div class="slider-preview__slide swiper-slide">
-                                <div class="swiper-slide__title">Weather With You</div>
+                                <div class="swiper-slide__title">Genshin Impact</div>
                                 <div class="swiper-slide__text">Corrupt politicians, frenzied nationalists, and other
                                     warmongering forces constantly jeopardize the thin veneer of peace between
                                     neighboring countries Ostania and Westalis.</div>

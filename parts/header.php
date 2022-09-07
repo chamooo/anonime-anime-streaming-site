@@ -6,7 +6,7 @@
             </div>
             <nav class="menu__body">
                 <ul class="menu__list">
-                    <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+                    <li class="menu__item"><a href="/index.php" class="menu__link">Home</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">List anime</a></li>
                 </ul>
             </nav>
