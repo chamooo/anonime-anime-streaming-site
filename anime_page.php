@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anonime</title>
-    <link rel="stylesheet" href="css/anime_page.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/null.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/playerjs.js" type="text/javascript"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />

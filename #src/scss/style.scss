@@ -1,7 +1,14 @@
+$md1250: 1249.98;
+
 $md1: 1199.98;
 $md2: 990.98;
 $md3: 768.98;
 $md4: 479.98;
+
+
+$burgerBreakpoint: $md3;
+$burgerColor: #ffff;
+$burgerActiveColor: 'white';
 
 $bgColor: #192026;
 
@@ -24,6 +31,8 @@ body {
 @media (max-width: ($md1 + px)){
     [class*="__container"] {
         max-width: 970px;
+        display: block;
+        
 
     }
 }
@@ -35,8 +44,8 @@ body {
 }
 @media (max-width: ($md3 + px)){
     [class*="__container"] {
-        padding-left: 15px;
-        padding-right: 15px;
+        // padding-left: 15px;
+        // padding-right: 15px;
         max-width: none;
     }
 }
