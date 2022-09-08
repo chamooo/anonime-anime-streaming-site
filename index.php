@@ -11,17 +11,14 @@
     <link rel="stylesheet" href="css/null.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,regular,500,600,700,800,900"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900"
-        rel="stylesheet" />
 </head>
 
 <body>
+    <!-- <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div> -->
     <div class="wrapper">
         <?php require('parts/header.php') ?>
 
@@ -82,7 +79,7 @@
                             while($row = $result->fetch_assoc()):
                             ?>
                             <div class="movies-new__item item-new-movies">
-                                <a href="anime_page.php?id=<?= $row['id'] ?>" class="item-new-movies__image small-gradient">
+                                <a href="anime_page.php?id=<?= $row['id'] ?>&title=<?= $row['title'] ?>" class="item-new-movies__image small-gradient">
                                     <img src="<?= $row['img_src'] ?>" alt="">
                                 </a>
                                 <div class="item-new-movies__episode">Episode <?= $row['movie_episode'] ?></div>
@@ -95,8 +92,11 @@
             </section>
         </main>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/preloader.js"></script>
 </body>
 
 </html>

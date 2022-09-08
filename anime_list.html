@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonime | Search anime</title>
+    <link rel="stylesheet" href="css/null.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__menu menu">
+                <div class="header__logo">
+                    <a href="/index.php">Anomime</a>
+                </div>
+                <nav class="menu__body">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="/index.php" class="menu__link">Home</a></li>
+                        <li class="menu__item"><a href="/anime_list.html" class="menu__link">List anime</a></li>
+                    </ul>
+                </nav>
+                <form class="header__form form-header" method="POST" action="anime_page.php?id">
+                    <input name="search" class="form-header__input" type="text" placeholder="Search">
+                    <input name="search-btn" class="search-btn" type="submit" value="">
+                </form>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="anime">
+        <section class="anime__main head">
+            <div class="head__container">
+                <div class="head__title title">Find your favourite one or something new!</div>
+                <div class="head__subtitle subtitle">Search</div>
+                <form class="header__form form-header" method="POST" action="anime_page.php?id">
+                    <input name="search" class="form-header__input" type="text" placeholder="Search">
+                    <input name="search-btn" class="search-btn" type="submit" value="">
+                </form>
+                <div class="head__tags tags-header"></div>
+            </div>
+
+        </section>
+    </div>
+</body>
+
+</html>

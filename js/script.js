@@ -1,4 +1,3 @@
-/*jshint esversion: 6 */
 // SLIDER
 
 const swiper = new Swiper('.slider-preview', {
@@ -11,3 +10,5 @@ const swiper = new Swiper('.slider-preview', {
       delay: 2700,
     }
   });
+
+
